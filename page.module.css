@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg:           #F2F2F7;
+  --bg2:          #E5E5EA;
+  --card:         #FFFFFF;
+  --sep:          rgba(60,60,67,0.12);
+  --sep2:         rgba(60,60,67,0.06);
+  --green:        #30A257;
+  --green-bg:     rgba(48,162,87,0.10);
+  --text:         #1C1C1E;
+  --text2:        #3A3A3C;
+  --text3:        #6D6D72;
+  --text4:        #AEAEB2;
+  --font:         'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+html {
+  touch-action: manipulation;
+  /* 阻止 iOS Safari 自動調整字體大小 */
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
+}
+
+/*
+  iOS Safari 在 input/textarea 字體 < 16px 時會自動 zoom in。
+  用 !important 確保任何地方的 class 都無法覆蓋這條規則。
+*/
+input, textarea, select {
+  user-select: text;
+  -webkit-user-select: text;
+  font-size: 16px !important;
+  font-family: var(--font);
+}
